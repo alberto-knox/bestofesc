@@ -128,13 +128,16 @@
   var params = new URLSearchParams(location.search);
   var id = (params.get("id") || "").trim();
 
+  /* ID-Eingabe: immer sichtbar, auch auf der Seite eines einzelnen Songs */
+  $("manual").hidden = false;
+  $("manual").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = $("manual-id").value.trim();
+    if (v) location.search = "?id=" + encodeURIComponent(v);
+  });
+
   if (!id) {
-    $("manual").hidden = false;
-    $("manual").addEventListener("submit", function (e) {
-      e.preventDefault();
-      var v = $("manual-id").value.trim();
-      if (v) location.search = "?id=" + encodeURIComponent(v);
-    });
+    setMsg("");
     return;
   }
 
