@@ -36,7 +36,16 @@
     text-align: center;
   }
   main { width: 100%; max-width: 420px; display: flex; flex-direction: column; align-items: center; gap: 28px; }
-  h1 { margin: 0; font-size: 15px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  @font-face {
+    font-family: "Grozan";
+    src: local("Grozan"), url("grozan.woff2") format("woff2"), url("grozan.ttf") format("truetype");
+    font-display: swap;
+  }
+  h1 {
+    margin: 0; font-family: "Grozan", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(40px, 12vw, 56px); line-height: 1.1; letter-spacing: .02em;
+    color: var(--fg); font-weight: 800;
+  }
 
   #play {
     width: 200px; height: 200px; border-radius: 50%;
