@@ -65,7 +65,7 @@
   }
   @media (prefers-reduced-motion: reduce) { #play.playing { animation: none; } }
 
-  .row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  .row { display: flex; gap: 10px; flex-wrap: nowrap; justify-content: center; align-items: center; }
   .btn {
     font: inherit; font-size: 16px; font-weight: 600;
     padding: 12px 22px; border-radius: 999px; cursor: pointer;
@@ -79,7 +79,7 @@
 
   form { display: flex; gap: 8px; }
   input {
-    font: inherit; padding: 10px 14px; border-radius: 999px; width: 140px; text-align: center;
+    font: inherit; font-size: 16px; padding: 12px 6px; border-radius: 999px; width: 64px; text-align: center;
     border: 2px solid var(--muted); background: transparent; color: var(--fg);
   }
   form[hidden] { display: none; }
@@ -100,12 +100,11 @@
 
   <div class="row">
     <button id="restart" class="btn" hidden>Von vorn</button>
+    <form id="manual" hidden>
+      <input id="manual-id" inputmode="numeric" maxlength="3" placeholder="ID" aria-label="ID" autocomplete="off">
+      <button class="btn" type="submit">Los</button>
+    </form>
   </div>
-
-  <form id="manual" hidden>
-    <input id="manual-id" inputmode="numeric" placeholder="ID" aria-label="ID" autocomplete="off">
-    <button class="btn" type="submit">Los</button>
-  </form>
 </main>
 
 <div id="yt-wrap"><div id="yt"></div></div>
