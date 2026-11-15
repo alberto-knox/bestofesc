@@ -1,0 +1,19 @@
+[
+  {
+    "id": "001",
+    "youtube": "dQw4w9WgXcQ",
+    "start": 43,
+    "end": 75,
+    "year": 1987,
+    "artist": "Rick Astley",
+    "title": "Never Gonna Give You Up"
+  },
+  {
+    "id": "002",
+    "youtube": "HIER_VIDEO_ID",
+    "start": 0,
+    "year": 0,
+    "artist": "Interpret",
+    "title": "Titel"
+  }
+]
